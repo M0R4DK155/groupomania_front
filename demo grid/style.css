@@ -1,0 +1,95 @@
+img.avatar {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+}
+body {
+    margin: 0;
+    background-color: #eee;
+}
+header {
+    display: grid;
+    grid-template-areas:
+        'logo image'
+        'logo bouton';
+    grid-template-columns: 40rem auto;
+    grid-template-rows: 4rem 2rem;
+    width: 100%;
+    background-color: aqua;
+    height: 5rem;
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+    width: 100%;
+    background-color: aqua;
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    margin-top: 5rem;
+}
+
+main {
+    max-width: 1024px;
+    margin: 1rem auto 0 auto;
+}
+
+aside,
+article {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+main > aside {
+    display: grid;
+    grid-template-areas:
+        'photo texte'
+        'photo bouton';
+    grid-template-columns: 4rem auto;
+    grid-template-rows: 4rem 2rem;
+}
+
+main > aside textarea {
+    grid-area: texte;
+}
+
+main > aside img {
+    grid-area: photo;
+}
+
+main > aside button {
+    grid-area: bouton;
+}
+
+article {
+    display: grid;
+    grid-template-areas:
+        'msg msg avatar'
+        'date . repondre'
+        '. reponses .';
+    margin-bottom: 2rem;
+}
+article h2 {
+    grid-area: date;
+    font-size: 0.8rem;
+}
+article img {
+    grid-area: avatar;
+}
+
+article p {
+    grid-area: msg;
+}
+
+article aside {
+    grid-area: reponses;
+}
+
+article button {
+    grid-area: repondre;
+}
