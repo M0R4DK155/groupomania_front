@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-const axios = require("axios"); // Librairie permettant de d'interagir avec l'API. (Récupération de données entres autres)
+const axios = require("axios"); // Librairie permettant de d'interagir avec l'API. (Récupération de données entres autres).
 
 // Définir les valeurs par défaut de la configuration lors de la création de l'instance.
 const instance  =  axios.create ( { 
@@ -10,8 +10,8 @@ const instance  =  axios.create ( {
 // Fonction pour récuperer un utilisateur dans le localStorage
 let user = localStorage.getItem("user");
 
-// Modifier les valeurs par défaut après la création de l' instance.
-// instance.defaults.headers.common["Authorization"] = "Bearer" + user.token;
+// Modifier les valeurs par défaut après la création de l'instance.
+// TODO instance.defaults.headers.common["Authorization"] = "Bearer" + user.token;
 
 Vue.use(Vuex);
 
@@ -49,7 +49,8 @@ export default new Vuex.Store({
     userId: 0,
     publications: [],
     token : null,
-    test:null
+    isAuthenticated: false,
+    test: null
     // commentaires: {}
   },
   mutations: {
@@ -81,10 +82,11 @@ export default new Vuex.Store({
     login: async ({ commit }, userinfos) => {
       try {
         commit("setStatus", "loading"); // La méthode commit acte la mutation.
-        const response = await instance.post("/auth/login", userinfos);
+        const response = await instance.post("/user/login", userinfos);
         commit("setStatus", "");
         commit("logUser", response.data);
-        return response.data;
+        // return response.data;
+        //redirection vers accueil
       }
       catch (err) {
         commit("setStatus", "error_login");
