@@ -1,7 +1,7 @@
 <template>
   <article class="Commentaire">
     <h2>posté par {{ auteur }}, le {{ dateMiseEnForme }}</h2>
-    <p>Moi j'aime pas les loutres</p>
+    <textarea>Moi j'aime pas les loutres!</textarea>
     <button>Envoyez votre commentaire</button>
   </article>
 </template>

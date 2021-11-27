@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
+  <section class="home">
     <img
-      alt="Vue logo"
+      alt="logo_accueil"
       src="../assets/logo.png"
     >
     <HelloWorld msg="Groupomania - Le réseau social" />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -13,7 +13,7 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "Home",
+  name: "Home", 
   components: {
     HelloWorld
   },
@@ -28,3 +28,7 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+
+</style>

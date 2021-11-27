@@ -1,16 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">
-        Inscription
-      </router-link> |
-      <router-link to="/about">
-        Connexion
-      </router-link>
-    </div>
+<body>
+    <header>
+        <Navbar />
+        <div id="app">
     <router-view />
   </div>
+    </header>
+</body>
 </template>
+
+<script>
+// @ is an alias to /src
+import Navbar from "@/components/Navbar.vue";
+
+export default {
+  name: "Groupomania",
+  components: {
+    Navbar,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -32,5 +41,9 @@
       color: #42b983;
     }
   }
+}
+
+img {
+    width: 50%;
 }
 </style>
