@@ -217,7 +217,7 @@ export default new Vuex.Store({
     // TODO requete API modification image
     // TODO requete API suppression image
 
-     /**
+    /**
      * Requete API pour ajouter un commentaire.
      *
      * @param   {Object}  comment                   Toutes les infos du commentaire

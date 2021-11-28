@@ -18,6 +18,20 @@ import { mapState } from "vuex";
 
 export default {
   name: "Publication",
+  props: {
+    auteur: {
+      type: String,
+      default: "valeur par défaut",
+    },
+    date: {
+      type: String,
+      default: "2021-07-07 00:00:00", // La méthode now() renvoie le nombre de millisecondes écoulées sous forme d'un Number (nombre).
+    },
+    image: {
+      type: String,
+      default: ""
+    },
+  },
   data(){
     return{};
   },

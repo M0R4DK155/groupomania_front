@@ -45,9 +45,11 @@ export default {
 </script>
 
 <style scoped>
+
 .navbar {
+  font-family: "Open Sans", sans-serif;
   background-color: #333;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 /* Stylisation des liens à l'intérieur de la barre de navigation */
@@ -55,7 +57,8 @@ export default {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  margin: 0px 10px 0px 10px;
+  padding: 10px 20px 10px 10px;
   text-decoration: none;
   font-size: 17px;
 }

@@ -1,14 +1,24 @@
 <template>
   <div class="wrapper">
     <form class="login">
-      <p class="title">Connexion</p>
-      <input type="email" v-model="email" placeholder="Email" autofocus />
-      <i class="fa fa-user"></i>
-      <input type="password" placeholder="Password" />
-      <i class="fa fa-key"></i>
+      <p class="title">
+        Connexion
+      </p>
+      <input
+        v-model="email"
+        type="email"
+        placeholder="Email"
+        autofocus
+      >
+      <i class="fa fa-user" />
+      <input
+        type="password"
+        placeholder="Password"
+      >
+      <i class="fa fa-key" />
       <a href="#">Mot de passe oublié?</a>
       <button>
-        <i class="spinner"></i>
+        <i class="spinner" />
         <span class="state">Connexion</span>
       </button>
     </form>

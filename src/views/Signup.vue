@@ -12,7 +12,8 @@
                 <span><i
                   aria-hidden="true"
                   class="fa fa-envelope"
-                /></span>
+                />
+                </span>
                 <input
                   type="email" 
                   name="email" 
@@ -99,7 +100,6 @@ import { mapState } from "vuex";
 import Input from "@/components/input.vue";
 export default {
   name: "Signup",
-  components: Input,
   data() {
     return {
       contentNom: "",
@@ -157,7 +157,7 @@ export default {
     signup() {
       const self = this;
       this.$store
-        .dispatch("signup", {
+        .dispatch("signup", { //Déclenchement de l'action avec dispatch
           email: this.contentEmail,
           password: this.contentPassword,
           nom: this.contentNom,
@@ -168,7 +168,7 @@ export default {
         })
         .then(
           function () {
-            self.$router.push("/storie");
+            self.$router.push("/home");
           },
           function (error) {
             console.log(error);

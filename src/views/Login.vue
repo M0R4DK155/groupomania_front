@@ -1,32 +1,74 @@
 <template>
-<section class="login">
-  <div class="form_wrapper">
-    <form class="login">
-      <p class="title">Connexion</p>
-      <input type="email" 
-      v-model="email" 
-      placeholder="Email" 
-      autofocus 
-      required/>
-      <i class="fa fa-user"></i>
-      <input type="password" 
-      placeholder="Password" 
-      required 
-      />
-      <i class="fa fa-key"></i>
-      <a href="#">Mot de passe oublié?</a>
-      <button>
-        <i class="spinner"></i>
-        <span class="state">Connexion</span>
-      </button>
-    </form>
-  </div>
+  <section class="login">
+    <div class="form_wrapper">
+      <form class="login">
+        <p class="title">
+          Connexion
+        </p>
+        <input
+          v-model="email" 
+          type="email" 
+          placeholder="Email" 
+          autofocus 
+          required
+        >
+        <i class="fa fa-user" />
+        <input
+          type="password" 
+          placeholder="Password" 
+          required 
+        >
+        <i class="fa fa-key" />
+        <a href="#">Mot de passe oublié?</a>
+        <button>
+          <i class="spinner" />
+          <span class="state">Connexion</span>
+        </button>
+      </form>
+    </div>
   </section>
 </template>
 
 <script>
 export default {
-    name:"Login"
+  name:"Login",
+  data(){
+    return {
+      email: "",
+      password: "",
+      contentEmail: "",
+      contentPassword: "",
+      inputEmail: {
+        title: "Email :",
+        type: "text",
+      },
+      inputPassword: {
+        title: "Password :",
+        type: "password",
+      },
+    };
+  },
+  //   computed: {
+  //     validatedFields() {
+  //       return this.contentEmail != "" && this.contentPassword != ""
+  //         ? true
+  //         : false;
+  //     },
+  //     ...mapState(["status", "errMessage"]),
+  //   },
+  methods: {
+    login() {
+      const self = this;
+      this.$store
+        .dispatch("login", {
+          email: this.contentEmail,
+          password: this.contentPassword,
+        })
+        .then(function () {
+          self.$router.push("/");
+        });
+    },
+  }
 };
 </script>
 
@@ -36,7 +78,7 @@ $primary: #2196f3;
 body {
   font-family: "Open Sans", sans-serif;
   height: 100vh;
-  background: url("https://i.imgur.com/HgflTDf.jpg") 50% fixed;
+  background: img ("") 50% fixed;
   background-size: cover;
 }
 
@@ -68,6 +110,7 @@ body {
   border-radius: 2px 2px 5px 5px;
   padding: 10px 20px 20px 20px;
   width: 90%;
+  margin: 8% auto 0;
   max-width: 320px;
   background: #ffffff;
   position: relative;

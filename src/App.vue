@@ -1,12 +1,12 @@
 <template>
-<body>
+  <body>
     <header>
-        <Navbar />
-        <div id="app">
-    <router-view />
-  </div>
+      <Navbar />
+      <div id="app">
+        <router-view />
+      </div>
     </header>
-</body>
+  </body>
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
