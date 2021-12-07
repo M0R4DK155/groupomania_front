@@ -14,6 +14,7 @@
         >
         <i class="fa fa-user" />
         <input
+          v-model="password"
           type="password" 
           placeholder="Password" 
           required 
@@ -65,7 +66,7 @@ export default {
           password: this.contentPassword,
         })
         .then(function () {
-          self.$router.push("/");
+          self.$router.push("/publication");
         });
     },
   }

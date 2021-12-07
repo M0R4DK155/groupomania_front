@@ -1,9 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      Ajoutez vos publications
-    </p>
+    <p>Ajoutez vos publications</p>
     <h2>test scoped</h2>
     <h3>PUBLICATIONS</h3>
     <publicationAccueil auteur="Obi Wan Kenobi" />
