@@ -30,5 +30,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 20px 0 0 0;
+}
 </style>

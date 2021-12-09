@@ -39,9 +39,10 @@ export default {
     }
 
   },
-  data : ()=> {return  {
-    dateMiseEnForme : this.props.date.toLocalDateString()
-  };
+  data : ()=> {
+    return {
+      dateMiseEnForme : this.props.date.toLocalDateString()
+    };
   }
 };
 </script>

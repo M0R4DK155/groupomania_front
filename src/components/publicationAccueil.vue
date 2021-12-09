@@ -1,13 +1,21 @@
 <template>
   <article class="publicationAccueil">
-    <br>
-    <img
-      src="https://www.artmajeur.com/medias/standard/b/e/bece/artwork/12871178_img-20191012-212326-1.jpg"
-      alt="Avatar"
-      class="avatar"
-    >
-    <span class="w3-right w3-opacity">Le {{ dateMiseEnForme }}</span>
-    <h4>posté par {{ auteur }}</h4><br>
+    <div class="container">
+      <br>
+      <div class="item">
+        <img
+          src="https://www.artmajeur.com/medias/standard/b/e/bece/artwork/12871178_img-20191012-212326-1.jpg"
+          alt="Avatar"
+          class="avatar"
+        >  
+      </div>
+      <div class="item">
+        <span class="w3-right w3-opacity"> Le {{ dateMiseEnForme }}</span>
+      </div>
+      <div class="item">
+        <h4> posté par {{ auteur }}</h4><br>
+      </div>
+    </div>  
     <hr class="w3-clear">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <div class="w3-row-padding">
@@ -98,7 +106,6 @@ article {
     padding: 1rem;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
 }
 
@@ -106,9 +113,6 @@ article img {
     width:50%;
 }
 
-article div{
-    margin:0 -16px;
-}
 
 
 img.avatar {
@@ -119,5 +123,21 @@ img.avatar {
     border-radius: 50%;
     align-self: center;
     justify-self: center;
+}
+
+.container {
+display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.item {
+  flex-grow: 1;
+  height: 100px;
+}
+
+.item + .item {
+  margin-left: 2%;
 }
 </style>
